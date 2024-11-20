@@ -78,13 +78,13 @@ public class Perceptron {
     }
 
     private double funkcjaAktywacji(double suma) {
-        return suma >= 0 ? 1.0 : 0.0; // zmiana bo bylo 1 i 0
+        return suma >= 0 ? 1.0 : 0.0;
     }
 
     public String klasyfikuj(double[] dane) {
         double przewidywanie = przewiduj(dane);
         for (Map.Entry<String, Double> wpis : mapaKlas.entrySet()) {
-            if (wpis.getValue().equals(przewidywanie)) { //bylo wpis.getValue() == przewidywanie)
+            if (wpis.getValue().equals(przewidywanie)) {
                 return wpis.getKey();
             }
         }
@@ -119,12 +119,8 @@ public class Perceptron {
 
                 String ostatniToken = tokeny[tokeny.length - 1];
                 if (!mapaKlas.containsKey(ostatniToken)) {
-                    mapaKlas.put(ostatniToken, (double) mapaKlas.size()); //mapaklasa size dla unikalnosci
-              }           //Sprawdza, czy ostatniToken (czyli etykieta klasy) nie znajduje się jeszcze w mapie mapaKlas.
-//                        Jeśli nie, to ostatniToken jest dodawany do mapy jako klucz, z wartością równą aktualnej wielkości mapy mapaKlas.
-//                        Ten fragment kodu mapuje etykiety klas na wartości liczbowe. To jest przydatne, ponieważ perceptron działa z wartościami numerycznymi,
-//                        a nie bezpośrednio z etykietami tekstowymi. Unikalne indeksowanie klas: Dzięki temu fragmentowi kodu, każda unikalna etykieta klasy otrzymuje unikalny indeks liczbowy. Indeks ten jest następnie wykorzystywany przez perceptron w procesie trenowania i przewidywania.
-//                        Konwersja etykiet na numery: Wartość zwrócona przez mapaKlas.get(ostatniToken) jest zapisywana jako ostatni element tablicy cechy. To zamienia tekstową etykietę klasy na wartość numeryczną, którą perceptron może wykorzystać do obliczeń.
+                    mapaKlas.put(ostatniToken, (double) mapaKlas.size());
+                }
                     cechy[cechy.length - 1] = mapaKlas.get(ostatniToken);
                     dane.add(cechy);
             }
