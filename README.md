@@ -1,7 +1,4 @@
 # Perceptron
-
-Napisz implementację perceptronu.
-
 Program umożliwia trening perceptronu rozpoznającego 2 klasy.
 
 Użytkownik podaje argumenty (w wierszu poleceń):
@@ -11,7 +8,7 @@ stała uczenia
 liczba epok - jedna epoka to jedna iteracja przez całe dane treningowe
 
 Wagi i próg perceptronu są inicjowane jako małe liczby, bliskie 0. Perceptron jest trenowany na danych treningowych przy użyciu reguły delta przez zadaną liczbę epok.
-Wypisz dokładność na zbiorze testowym po każdej epoce.
+Program wypisuje dokładność na zbiorze testowym po każdej epoce.
 
 Dane treningowe mogą być mieszane po każdej epoce, aby uzyskać lepsze wyniki.
 
