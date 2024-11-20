@@ -1,7 +1,7 @@
 # Perceptron
 Program umożliwia trening perceptronu rozpoznającego 2 klasy.
 
-Użytkownik podaje argumenty (w wierszu poleceń):
+Użytkownik podaje jako argumenty:
 ścieżka do pliku z danymi treningowymi
 ścieżka do pliku z danymi testowymi
 stała uczenia
